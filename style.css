@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
+    text-align: center; 
   }
   
   .center {
-    text-align: center;
-    margin: 0 auto;
+    margin: 0 auto; 
   }
   
   header {
@@ -23,24 +23,26 @@ body {
   
   header h1 {
     color: white;
-    font-size: 2em;
+    font-size: 2.5em; 
     margin-top: 10px;
   }
   
   nav {
     background-color: whitesmoke;
     padding: 10px 0;
+    display: flex; 
+    justify-content: space-around; 
   }
   
   nav a {
     color: black;
     text-decoration: none;
     padding: 10px 20px;
-    display: inline-block;
+    transition: background-color 0.2s ease; 
   }
   
   nav a:hover {
-    background-color: white;
+    background-color: #f2f2f2;
   }
   
   main {
@@ -55,7 +57,7 @@ body {
   }
   
   .hero img {
-    width: 100%
+    width: 100%;
   }
   
   .hero p {
@@ -71,65 +73,24 @@ body {
   }
   
   .gallery {
-    display: flex; 
-    overflow: hidden; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 10px; 
+    overflow: hidden;
   }
   
   .gallery ul.cards {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    transition: transform 0.5s ease-in-out; 
+    display: flex; 
+    transition: transform 0.5s ease-in-out;
   }
   
-  .gallery ul.cards li {
-    flex: 0 0 25%; 
-    margin: 0 10px; 
-  }
-  
-  .gallery img {
-    width: 100%; 
-  }
-  
-  .gallery button.prev,
-  .gallery button.next {
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    background-color: rgba(0, 0, 0, 0.5); 
-    color: white; 
-    font-size: 20px;
-    padding: 5px 10px; 
-    border: none; 
-    cursor: pointer; 
-    opacity: 0; 
-    transition: opacity 0.5s ease; 
-  }
   
   .products section:hover .gallery button.prev,
   .products section:hover .gallery button.next {
-    opacity: 1; 
-  }
-  
-  .gallery button.prev {
-    left: 0; 
-  }
-  
-  .gallery button.next {
-    right: 0; 
-  }
-  
-  .gallery ul.cards {
-    transform: translateX(0); 
-  }
-  
-  .products section:hover .gallery ul.cards {
-    cursor: grab;
-  }
-  
-  .products section:active .gallery ul.cards {
-    cursor: grabbing;
+    opacity: 1;
   }
   
   article,
@@ -141,24 +102,7 @@ body {
   }
   
   article img {
-    width: 200px;
-    margin-right: 20px;
-  }
-  
-  article p {
-    margin-bottom: 5px;
-  }
-  
-  
-  footer {
-    background-color: purple; 
-    color: white; 
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer table {
-    margin: 0 auto;
-    width: 50%;
-    border-collapse: collapse;
+        width: 200px;
+        display: block;
+        margin: 0 auto;
   }
